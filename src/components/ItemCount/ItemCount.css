@@ -1,0 +1,16 @@
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    background-color: bisque;
+    border-radius: 3px ;
+    border: 2px solid;
+}
+.contenedor span{
+    width: 50%;
+    font-weight: bold;
+
+}
+.contenedor button{
+    font-weight: bold;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Card.css";
+import ItemCount from '../ItemCount/ItemCount';
 
 function Card(props) {
     return (
@@ -12,7 +13,8 @@ function Card(props) {
                 <p>{props.description}</p>
                 <h4>$ {props.prise}</h4>
             </section>
-            <a href={props.source}>Ver más</a>
+            {/* <a href={props.source}>Ver más</a> */}
+            <ItemCount initial={1} stock={6}/>
         </section>
 
     )

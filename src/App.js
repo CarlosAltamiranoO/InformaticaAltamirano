@@ -1,5 +1,6 @@
 /* import logo from './logo.svg'; */
 /* import './App.css'; */
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import NabVar from './components/NabVar/NabVar';
 import ItemListContainer from './components/Product/ItemListContainer.jsx';
 
@@ -18,7 +19,8 @@ function App() {
           <h1>COMPU-ESPACIO</h1>
       </header>
       <NabVar/>
-      <ItemListContainer greeting="Biembenidos a esta tienda de computación"/>
+      {/* <ItemListContainer greeting="Biembenidos a esta tienda de computación"/> */}
+      <ItemDetailContainer/>
     </>
   );
 }

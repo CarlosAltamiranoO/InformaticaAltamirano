@@ -1,5 +1,4 @@
 import React from 'react'
-/* import "./Item.css"; */
 import ItemCount from '../ItemCount/ItemCount';
 
 function ItemDetail(props) {
@@ -14,9 +13,8 @@ function ItemDetail(props) {
                 <p>{props.data.detail}</p>
                 <h4>$ {props.data.prise}</h4>
             </section>
-            {/* <ItemCount initial={1} stock={props.data.stock} />   NO SE PORQUe NO ANDA!!*/}
+            <ItemCount initial={1} stock={props.data.stock} />
         </section>
-
     )
 }
 

@@ -5,7 +5,7 @@ const data = [{
     prise: 152999,
     img: '/assets/Notebook/DELL-1-300x300.webp',
     stock: 8,
-    categorie: 'notebook'
+    category: 'hogar'
 }, {
     id: 2,
     title: "Notebook Asus Vivobook R565EA-US51",
@@ -13,7 +13,7 @@ const data = [{
     prise: 138999,
     img: '/assets/Notebook/ASUS-VIVOBOOK-R656EA-UH51T-300x300.webp',
     stock: 6,
-    categorie: 'notebook'
+    category: 'hogar'
 }, {
     id: 3,
     title: "Notebook Lenovo Ideapad 3 15itl06",
@@ -21,7 +21,7 @@ const data = [{
     prise: 114999,
     img: '/assets/Notebook/Lenovo-Ideapat-3-300x300.webp',
     stock: 10,
-    categorie: 'notebook'
+    category: 'hogar'
 }, {
     id: 4,
     title: "Notebook Msi GP66 Leopart",
@@ -29,7 +29,7 @@ const data = [{
     prise: 114999,
     img: '/assets/Notebook/MSI-FRONTAL-300x300.webp',
     stock: 4,
-    categorie: 'notebook'
+    category: 'gamer'
 }];
 
 export function getItems(){
@@ -39,10 +39,26 @@ export function getItems(){
         }, 2000)
     })
 }
-export function getItem(){
+
+export function getItemsByCategory(categoryId){
+    return new Promise((resolve, reject) => {
+        let itemFind = data.filter((item) => {
+            return item.category === categoryId;
+        });
+        setTimeout( () =>{
+            if (itemFind) resolve (itemFind);
+            else reject(new Error("item no encontrado!!"));
+        }, 2000)
+    })
+}
+
+
+export function getItem(itemId){
     return new Promise((resolve, reject) => {
         setTimeout( () =>{
-            resolve(data[2]);
+            let itemFind = data.find((item) => item.id === Number(itemId));
+            if (itemFind) resolve (itemFind);
+            else reject(new Error("item no encontrado!!"));
         }, 2000)
     })
 }

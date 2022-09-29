@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Item.css";
-import ItemCount from '../ItemCount/ItemCount';
+import {Link} from "react-router-dom";
 
 function Item(props) {
     return (
@@ -13,8 +13,9 @@ function Item(props) {
                 <p>{props.detail}</p>
                 <h4>$ {props.prise}</h4>
             </section>
-            {/* <a href={props.source}>Ver más</a> */}
-            <ItemCount initial={1} stock={props.stock}/>
+            <Link to= {`/producto/${props.id}`} >
+                VER MAS
+            </Link>
         </section>
 
     )

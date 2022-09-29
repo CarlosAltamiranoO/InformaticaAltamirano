@@ -1,8 +1,8 @@
-/* import logo from './logo.svg'; */
-/* import './App.css'; */
+
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import NabVar from './components/NabVar/NabVar';
+import NavBar from './components/NabVar/NavBar';
 import ItemListContainer from './components/Product/ItemListContainer.jsx';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 
 function App() {
@@ -14,38 +14,20 @@ function App() {
     color: "white"
   };
   return (
-    <>
+    <BrowserRouter>
       <header className="App-header" style = {headerStyle}>
           <h1>COMPU-ESPACIO</h1>
       </header>
-      <NabVar/>
-      {/* <ItemListContainer greeting="Biembenidos a esta tienda de computación"/> */}
-      <ItemDetailContainer/>
-    </>
+      <NavBar/>
+      <Routes>
+      <Route path='/' element={<ItemListContainer greeting="Biembenidos a esta tienda de computación"/>}/>
+      <Route path='/categoria/:categoryId' element={<ItemListContainer/>}/>
+      <Route path='/producto/:itemId' element={<ItemDetailContainer/>}/>
+      <Route path='*' element={<h2>404: Estamos experimentando dificultades tecnicas</h2>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
 
-/*  -- por las dudas --
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <NabVar/>
-    </div>
-  );
-} */

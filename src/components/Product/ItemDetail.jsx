@@ -13,7 +13,8 @@ function ItemDetail(props) {
                 <p>{props.data.detail}</p>
                 <h4>$ {props.data.prise}</h4>
             </section>
-            <ItemCount initial={1} stock={props.data.stock} />
+            {/* <ItemCount initial={1} stock={props.data.stock} />  no toma los datos que emvio*/}
+            <ItemCount initial={1} stock={8} />
         </section>
     )
 }

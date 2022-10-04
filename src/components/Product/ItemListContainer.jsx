@@ -7,7 +7,6 @@ import ItemList from './ItemList';
 function ItemListContainer(props) {
   let [data, setData] = useState([]);
   const { categoryId } = useParams();
-  console.log(categoryId);
 
   useEffect(
     () => {

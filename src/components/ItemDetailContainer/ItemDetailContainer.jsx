@@ -17,9 +17,6 @@ function ItemDetailContainer() {
         <>
             <section className="seccion">
                 <ItemDetail data={data} />
-                <section>
-                <button className="agregar">Agregar carrito</button>
-                </section>
             </section>
         </>
     )

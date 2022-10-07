@@ -3,7 +3,7 @@ import "./ItemCount.css";
 
 export default function ItemCount(props) {
     const [value, setValue] = useState({count: props.initial, stock: props.stock });
-    console.log("Valor inicail: "+props.initial+" stock: "+props.stock );
+    /* console.log("Valor inicail: "+props.initial+" stock: "+props.stock ); */
 
     function onAdd(){
         if(value.stock > 1) setValue({count: value.count + 1, stock: value.stock -1});

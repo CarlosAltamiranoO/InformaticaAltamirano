@@ -9,7 +9,7 @@ function CartWidget() {
   return (
     <>
     <a className = "nav_link" href="/"><img src={icono} alt="carrito" /></a>
-    <span>{getItemQty()}</span>
+    <span>{getItemQty() > 0 && getItemQty()}</span>
     </>
   )
 }

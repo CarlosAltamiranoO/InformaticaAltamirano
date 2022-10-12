@@ -22,6 +22,10 @@ export default function CartContextProvider({children}){
         /* console.log("datos:",item, count ); */
         
     }
+    function isEmpty(){
+        return cart.length === 0;
+
+    }
     function isInCart(id){
         let found = cart.some((item) => item.id === id);
         return found;
@@ -32,8 +36,18 @@ export default function CartContextProvider({children}){
     function getItemQty () {
         return cart.reduce((acc, x) => acc += x.count, 0);
     }
+    function totalPrise(){
+    }
+    function removeItem(id){
+        setCart( cart.filter(item => {
+            if (item.id !== id) {
+                return item;
+            }
+        }));
+    }
     return(
-        <cartContext.Provider value={{ cart, addItem, empyCart, getItemQty }}>{children}</cartContext.Provider>
+        <cartContext.Provider value={{ cart, isEmpty, addItem, empyCart, getItemQty, removeItem, totalPrise }}>{children}</cartContext.Provider>
     )
+    
 }
 export {cartContext}

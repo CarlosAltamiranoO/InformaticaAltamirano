@@ -4,6 +4,7 @@ import NavBar from './components/NabVar/NavBar';
 import ItemListContainer from './components/Product/ItemListContainer.jsx';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import CartContextProvider from './context/cartContext';
+import CartView from './components/CartView/CartView.jsx';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/' element={<ItemListContainer greeting="Biembenidos a esta tienda de computación"/>}/>
           <Route path='/categoria/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/producto/:itemId' element={<ItemDetailContainer/>}/>
+          <Route path='/cart' element={<CartView/>}/>
         <Route path='*' element={<h2>404: Estamos experimentando dificultades tecnicas</h2>}/>
         </Routes>
       </BrowserRouter>

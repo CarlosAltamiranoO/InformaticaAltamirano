@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import './ItemListContainer.css'
-import { getItems, getItemsByCategory } from '../../services/mockAPI';
+import {  } from '../../services/mockAPI';
+import { getItems, getItemsByCategory } from "../../services/firestore";
 import ItemList from './ItemList';
 
 function ItemListContainer(props) {
@@ -11,10 +12,10 @@ function ItemListContainer(props) {
   useEffect(
     () => {
       if (categoryId === undefined) {
-        getItems().then((respuesta) => { setData(respuesta); });
+        getItems().then((respuesta) =>  setData(respuesta));
       }
       else {
-        getItemsByCategory(categoryId).then((respuesta) => { setData(respuesta); });
+        getItemsByCategory(categoryId).then((respuestaD) => setData(respuestaD));
       }
     }, [categoryId]
   )

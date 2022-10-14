@@ -15,6 +15,7 @@ function App() {
     justifyContent: "center",
     color: "white"
   };
+  
   return (
     <CartContextProvider>
       <BrowserRouter>

@@ -16,7 +16,7 @@ function CartView() {
     return (
         <section className="ver">
             {cart.map((item) => (
-                <section>
+                <section key={item.id}>
                     <hr />
                     <h4>Producto: </h4>
                     <h3>{item.title}</h3>

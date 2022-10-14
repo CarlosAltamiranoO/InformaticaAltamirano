@@ -19,7 +19,6 @@ export default function CartContextProvider({children}){
         else{
             setCart([...cart, newItem]);
         }
-        /* console.log("datos:",item, count ); */
         
     }
     function isEmpty(){

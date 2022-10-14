@@ -4,7 +4,7 @@ import { Link} from "react-router-dom";
 function NavBar() {
     return (
         <nav className = "navBar">
-            <Link className = "logo" to="#">{/* <ing src = "" className = "logo" alt = "logo"/> ver como se hace! */} Logo </Link>
+            <Link className = "logo" to="/">{/* <ing src = "" className = "logo" alt = "logo"/> ver como se hace! */} Logo </Link>
             <ul className = "nav_menu">
                 <li className = "nav_item">
                     <Link className = "nav_link" to="/">INICIO</Link>
@@ -20,7 +20,7 @@ function NavBar() {
                     <Link className = "nav_link" to="/categoria/oficina">OFICINA</Link>
                 </li>
                 <li className = "nav_item">
-                    <Link className = "nav_link" to="#">CONTACTO</Link>
+                    <Link className = "nav_link" to="/">CONTACTO</Link>
                 </li>
                 <li className = "nav_item">
                 <Link to="/cart"><CartWidget/></Link>

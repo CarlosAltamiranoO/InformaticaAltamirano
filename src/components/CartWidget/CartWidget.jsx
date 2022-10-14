@@ -8,7 +8,7 @@ function CartWidget() {
   const {getItemQty} = useContext(cartContext);
   return (
     <>
-    <a className = "nav_link" href="/"><img src={icono} alt="carrito" /></a>
+    <img src={icono} alt="carrito" />
     <span>{getItemQty() > 0 && getItemQty()}</span>
     </>
   )

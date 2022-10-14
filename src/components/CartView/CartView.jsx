@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 function CartView() {
     const context = useContext(cartContext);
-    const { cart, isEmpty, removeItem, empyCart, totalPrise } = context;
+    const { cart, isEmpty, removeItem, empyCart, totalPrise, totalProduct } = context;
 
     if (isEmpty()) {
         return (
@@ -23,12 +23,9 @@ function CartView() {
                     <p>Precio: ${item.prise}</p>
                     <p>{item.detail}</p>
                     <p>Cantidad: {item.count}</p>
-                    <h4>Precio total: ${item.prise * item.count}</h4> {/* no me sale la funcion para sacar el total asique hise la operacion aca  */}
+                    <h4>total productos: ${totalProduct(item.id)}</h4> {/* no me sale la funcion para sacar el total asique hise la operacion aca  */}
                     <div>
-                        {/* <p>Precio total: <b className="price">${precioTotal()}</b></p> */}
-                        <div>
                             <button onClick={() => {removeItem(item.id)}}>eliminar producto</button>
-                        </div>
                     </div>
                     
                 </section>
@@ -36,6 +33,7 @@ function CartView() {
             <section>
             <hr />
             <hr />
+            <p>Precio total: <b className="price">${totalPrise()}</b></p>
             <button onClick={empyCart}>Vaciar carrito</button>
             <button >Finalizar compra</button>
             </section>

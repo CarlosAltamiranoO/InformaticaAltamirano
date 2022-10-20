@@ -10,6 +10,8 @@ import {
     getDoc,
     query,
     where,
+    addDoc,
+    setDoc,
 } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -72,7 +74,12 @@ export async function getItem(idParam) {
         console.error(error);
     }
 }
-
+export async function createBuyOrder(orderData){
+    console.log(orderData);
+    const collectionRef = collection(firestore, "orders");
+    let respuesta = await addDoc(collectionRef, orderData);
+    return  respuesta.id;
+}
 
 
 export default firestore;

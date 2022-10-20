@@ -5,6 +5,7 @@ import ItemListContainer from './components/Product/ItemListContainer.jsx';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import CartContextProvider from './context/cartContext';
 import CartView from './components/CartView/CartView.jsx';
+import Checkout from './components/Checkout/Checkout';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/categoria/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/producto/:itemId' element={<ItemDetailContainer/>}/>
           <Route path='/cart' element={<CartView/>}/>
+          <Route path='/checkout/:orderid' element={<Checkout/>}/>
         <Route path='*' element={<h2>404: Estamos experimentando dificultades tecnicas</h2>}/>
         </Routes>
       </BrowserRouter>

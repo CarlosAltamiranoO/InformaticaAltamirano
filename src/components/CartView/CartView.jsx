@@ -1,16 +1,33 @@
 import React, { useContext } from 'react';
 import { cartContext } from '../../context/cartContext';
 import {Link} from "react-router-dom";
+import { createBuyOrder } from '../../services/firestore';
+import {useNavigate} from "react-router-dom";
 
 function CartView() {
     const context = useContext(cartContext);
     const { cart, isEmpty, removeItem, empyCart, totalPrise, totalProduct } = context;
+    const navigate = useNavigate();
 
     if (isEmpty()) {
         return (
             <section>tu carrito esta vacio..  <Link to={"/"} ><b>Vamos a seguir comprando</b> </Link></section>
         )
 
+    }
+    function handleCheckout(){
+        const orderData ={
+            buyer:{
+                name: "carlos",
+                phone: 3512368071,
+                email: "carlos@gmail.com"
+            },
+            items: cart,
+            total: totalPrise()
+        }
+        createBuyOrder(orderData).then(orderid => {
+            navigate(`/checkout/${orderid}`);
+        });
     }
 
     return (
@@ -35,7 +52,7 @@ function CartView() {
             <hr />
             <p>Precio total: <b className="price">${totalPrise()}</b></p>
             <button onClick={empyCart}>Vaciar carrito</button>
-            <button >Finalizar compra</button>
+            <button onClick={handleCheckout}>Finalizar compra</button>
             </section>
         </section>
     );

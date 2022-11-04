@@ -1,0 +1,15 @@
+
+.itemDetail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    border: solid 2px gray;
+    padding: 15px;
+}
+.contador {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}

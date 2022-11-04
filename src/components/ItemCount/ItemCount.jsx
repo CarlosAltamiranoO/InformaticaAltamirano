@@ -20,7 +20,7 @@ export default function ItemCount(props) {
         <span>{value.count}</span>
         <button onClick={onAdd}> + </button>
     </div>
-    <span>Stock actual: {value.stock -1 }</span>
+    <span className='spam2'>Stock actual: {value.stock -1 }</span>
     <button onClick={() => props.onAdd(value.count)}>agergar al carrito</button>
     </>
   )

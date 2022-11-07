@@ -1,5 +1,8 @@
 # Proyecto React JS Coderhouse
 
+Proyecto creado por Carlos Alberto Altamirano Olmedo para el curso de React de CoderHouse .
+Se trata de un ecomerce de notebook que crea una orden de compra en una base de datos Firebase de Google. 
+
 ## Ver el [DEMO](https://) del sitio.
 
 # Levantar el proyecto en local

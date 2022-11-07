@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import './ItemListContainer.css'
-import {  } from '../../services/mockAPI';
 import { getItems, getItemsByCategory } from "../../services/firestore";
-import ItemList from './ItemList';
+import ItemList from '../Product/ItemList';
 
 function ItemListContainer(props) {
   let [data, setData] = useState([]);

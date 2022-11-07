@@ -22,7 +22,6 @@ function ItemDetail(props) {
             <h3>{props.data.title}</h3>
             <p>{props.data.detail}</p>
             <h4>$ {props.data.prise}</h4>
-            {/* <ItemCount initial={1} stock={props.data.stock} />  no toma los datos que emvio*/}
             <section className='contador'>
                 {!estadoCompra ? <ItemCount initial={1} stock={props.data.stock} onAdd={handleAdd} /> : <Link to={"/cart"} >Ir al carrito </Link>}
             </section>

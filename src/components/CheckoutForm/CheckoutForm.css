@@ -3,8 +3,7 @@
     margin: 0 auto;
 }
 .form-item{
-    display: flex;
-    justify-content: flex-end;
+    text-align: end;
     margin: 5px;
 }
 .form-item label{

@@ -1,7 +1,14 @@
 .view{
-    width: 80%;
+    width: 70%;
     border: solid 1px black;
     margin: 20px auto;
     background-color: bisque;
 
+}
+.view button{
+    margin: 5px;
+    text-align: center;
+    width: max-content;
+    font-weight: bold;
+    color: red;
 }

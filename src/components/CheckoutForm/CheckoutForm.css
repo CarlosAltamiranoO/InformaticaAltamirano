@@ -1,0 +1,18 @@
+.form-container {
+    width: 14%;
+    margin: 0 auto;
+}
+.form-item{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+}
+.form-item label{
+    margin-right: 4px;
+}
+.form-container button {
+    text-align: center;
+    width: max-content;
+    font-weight: bold;
+    color: blueviolet;
+}

@@ -9,7 +9,6 @@ function ItemDetail(props) {
     const { addItem } = useContext(cartContext);
 
     function handleAdd(count) {
-        alert(`agergaste al carrito ${count} ${props.data.title}`);
         setEstadoCompra(true);
         addItem(props.data, count);
     }

@@ -1,14 +1,18 @@
 .form-container {
-    width: 14%;
+    width: 16%;
     margin: 0 auto;
 }
-.form-item{
-    text-align: end;
+
+.form-item {
     margin: 5px;
+    display: flex;
+    justify-content: space-between;
 }
-.form-item label{
+
+.form-item label {
     margin-right: 4px;
 }
+
 .form-container button {
     text-align: center;
     width: max-content;

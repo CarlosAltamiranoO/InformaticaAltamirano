@@ -45,11 +45,7 @@ export default function CartContextProvider({ children }) {
 
 
     function removeItem(id) {
-        setCart(cart.filter(item => {
-            if (item.id !== id) {
-                return item;
-            }
-        }));
+        return setCart(cart.filter((item) => item.id !== id));
     }
     return (
         <cartContext.Provider value={{ cart, isEmpty, addItem, empyCart, getItemQty, removeItem, totalPrise, totalProduct }}>{children}</cartContext.Provider>
